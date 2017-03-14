@@ -1,61 +1,88 @@
-.app {
+.app
+{
   margin: 0 auto;
   padding-top: 20px;
-  width: 80%;
+  width: 90%;
   max-width: 1024px;
   text-align: center;
   font-family: "Arial";
-}
-
-.search-bar
-{
-  margin: 20px;
-  text-align: center;
-  input
+  .redText
   {
-    width: 50%;
-    padding: 5px 10px;
-    &:focus
+    color: red;
+  }
+  .greenText
+  {
+    color: green
+  }
+  .search-bar
+  {
+    margin: 20px;
+    text-align: center;
+    input
     {
-      background-color: white;
+      width: 50%;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid #999;
+      &:focus
+      {
+        background-color: white;
+      }
+      @media(max-width: 414px)
+      {
+        width: 95%;
+      }
+    }
+  }
+  .user-info
+  {
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    img
+    {
+      width: 150px;
+      border-radius: 50%;
+    }
+  }
+  .repo-list
+  {
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 1px dotted #666;
+    ul
+    {
+      padding: 0px;
+      list-style: none;
+      li
+      {
+        border: 1px solid #333;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+        a
+        {
+          text-transform: uppercase;
+          font-size: 18px;
+        }
+        p
+        {
+          margin: 5px 0px 0px;
+        }
+        &:hover
+        {
+          background-color: #D3D3D3;
+        }
+      }
     }
   }
 }
 
-.userInfo {
-  border: 1px solid #333;
-  padding: 10px;
-  margin-bottom: 30px;
-  overflow: auto;
-}
 
-.userInfo img {
-  float: left;
-  width: 20%;
-}
-.userInfo .userText {
-  float: right;
-  width: 80%;
-}
 
-.repoName {
-    text-align: left;
-}
 
-.redText {
-    color: red;
-}
 
-.list-group {
-  padding: 0px;
-}
 
-.list-group-item {
-  margin-bottom: 5px;
-}
-
-.list-group-item a {
-  float: right;
-}
 
 

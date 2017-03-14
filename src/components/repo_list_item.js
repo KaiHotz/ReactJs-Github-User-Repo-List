@@ -1,14 +1,19 @@
 import React from 'react';
 
 
-const RepoistItem = ({repo}) => {
+const RepoListItem = ({repo}) => {
 
   return (
-    <li className="list-group-item">
-      <a href={repo.html_url}>{repo.name}</a>
+    <li>
+      <a href={repo.html_url} target="_blank">{repo.name}</a>
+      <p> Language:
+        {repo.language !== null ? <span className="greenText"> {repo.language}</span> : <span className="redText"> Unknown </span>}
+      </p>
+      <p>Description:</p>
+      {repo.description !== null ? <span className="greenText"> {repo.description}</span> : <span className="redText"> None </span>}
     </li>
   );
 
 };
 
-export default RepoistItem;
+export default RepoListItem;

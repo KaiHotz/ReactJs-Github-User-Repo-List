@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import RepoListItem from './repo_list_item';
 
 const RepoList = (props) => {
@@ -13,9 +13,13 @@ const RepoList = (props) => {
   });
 
   return (
-    <ul className="col-md-12 list-group">
-      {repoItems}
-    </ul>
+    <div className="repo-list">
+      <h4>List of available repositories:</h4>
+      <p>(click on the repo name to visit on GitHub)</p>
+      <ul>
+        {repoItems}
+      </ul>
+    </div>
   );
 };
 

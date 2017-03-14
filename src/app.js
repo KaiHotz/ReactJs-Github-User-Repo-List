@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import fetch from 'simple-fetch';
 import SearchBar from './components/search_bar';
+import UserInfo from './components/user_info';
 import RepoList from './components/repo_list';
 
 require('../style/style.scss');
@@ -37,7 +38,7 @@ class App extends Component{
 
   render(){
 
-    const gitSearch = _.debounce((username) => { this.gitSearch(username) }, 100);
+    const gitSearch = _.debounce((username) => { this.gitSearch(username) }, 500);
 
     return (
       <div className="app">
@@ -46,7 +47,9 @@ class App extends Component{
         {
           this.state.userFound && this.state.repos.length > 0 ?
           <div>
-            <h4>List of available repositories:</h4>
+            <UserInfo
+              info={ this.state.repos[0] }
+            />
             <RepoList
               repos={ this.state.repos }
             />
