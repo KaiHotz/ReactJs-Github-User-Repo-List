@@ -5,6 +5,8 @@ import fetch from 'simple-fetch';
 import SearchBar from './components/search_bar';
 import RepoList from './components/repo_list';
 
+require('../style/style.scss');
+
 const API_URL = 'https://api.github.com/users';
 
 class App extends Component{

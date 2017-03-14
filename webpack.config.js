@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+      loaders: ['style', 'css', 'sass']
     }]
   },
   resolve: {

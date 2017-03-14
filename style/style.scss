@@ -7,18 +7,19 @@
   font-family: "Arial";
 }
 
-.search-bar {
+.search-bar
+{
   margin: 20px;
   text-align: center;
-}
-
-.search-bar input {
-  width: 50%;
-  padding: 5px 10px;
-}
-
-.search-bar input:focus {
-    background-color: white;
+  input
+  {
+    width: 50%;
+    padding: 5px 10px;
+    &:focus
+    {
+      background-color: white;
+    }
+  }
 }
 
 .userInfo {
@@ -37,13 +38,11 @@
   width: 80%;
 }
 
-
 .repoName {
     text-align: left;
 }
 
 .redText {
-    composes: repoName;
     color: red;
 }
 
