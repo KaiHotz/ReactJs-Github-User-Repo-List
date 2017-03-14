@@ -16,6 +16,7 @@ class SearchBar extends Component{
           placeholder="Enter a Github User's name"
           value={this.state.userName}
           onChange={ event =>  this.onInputChange(event.target.value)}
+          type="text"
         />
       </div>
     );
