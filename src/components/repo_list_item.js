@@ -4,7 +4,7 @@ const RepoListItem = ({repo, onRepoSelect}) => {
 
   return (
     <li onClick={() => onRepoSelect(repo.html_url)}>
-      <a href={repo.html_url} target="_blank">{repo.name}</a>
+      <h3 className="blueText">{repo.name}</h3>
       <p> Language:
         {repo.language !== null ? <span className="greenText"> {repo.language}</span> : <span className="redText"> Unknown </span>}
       </p>

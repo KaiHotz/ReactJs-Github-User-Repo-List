@@ -12,7 +12,11 @@
   }
   .greenText
   {
-    color: green
+    color: green;
+  }
+  .blueText
+  {
+    color: blue;
   }
   .search-bar
   {
@@ -23,7 +27,7 @@
       width: 50%;
       padding: 5px 10px;
       border-radius: 10px;
-      border: 1px solid #999;
+      border: 1px solid #999999;
       &:focus
       {
         background-color: white;
@@ -50,14 +54,14 @@
   {
     max-width: 600px;
     margin: 0 auto;
-    border-top: 1px dotted #666;
+    border-top: 1px dotted #666666;
     ul
     {
       padding: 0px;
       list-style: none;
       li
       {
-        border: 1px solid #333;
+        border: 1px solid #333333;
         border-radius: 5px;
         margin-bottom: 5px;
         padding: 10px;
