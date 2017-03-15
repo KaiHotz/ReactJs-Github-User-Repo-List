@@ -10,6 +10,7 @@ There are two methods for getting started with this repo.
   > cd ReactJs-Github-User-Repo-List
   > npm install
   > npm start
+  > in your Browser open http://localhost:8080
 ```
 
 ####Not Familiar with Git?#####
@@ -18,4 +19,5 @@ Click [here](https://github.com/SpecialKcl/ReactJs-Github-User-Repo-List) then d
 ```
   > npm install
   > npm start
+  > in your Browser open http://localhost:8080
 ```
