@@ -6,7 +6,6 @@ const RepoList = (props) => {
   const repoItems = props.repos.map((repo, index)=>{
     return (
       <RepoListItem
-        onRepoSelect={props.onRepoSelect}
         key={index}
         repo={repo}
       />

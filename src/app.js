@@ -36,10 +36,6 @@ class App extends Component{
         this.setState({ repos: [] });
   }
 
-  onRepoSelect(url) {
-    window.open(url, "_blank");
-  }
-
   render(){
 
     const gitSearch = _.debounce((username) => { this.gitSearch(username) }, 500);
@@ -55,7 +51,6 @@ class App extends Component{
               info={ this.state.repos[0] }
             />
             <RepoList
-              onRepoSelect={ this.onRepoSelect }
               repos={ this.state.repos }
             />
           </div>
