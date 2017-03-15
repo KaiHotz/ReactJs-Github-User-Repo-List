@@ -21,3 +21,8 @@ Click [here](https://github.com/SpecialKcl/ReactJs-Github-User-Repo-List) then d
   > npm start
   > in your Browser open http://localhost:8080
 ```
+
+####To run Integration Test#####
+```
+  > npm test
+```
