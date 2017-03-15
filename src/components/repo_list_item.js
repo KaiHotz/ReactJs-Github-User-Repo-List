@@ -1,9 +1,9 @@
 import React from 'react';
 
-const RepoListItem = ({repo}) => {
+const RepoListItem = ({repo, onRepoSelect}) => {
 
   return (
-    <li>
+    <li onClick={() => onRepoSelect(repo.html_url)}>
       <a href={repo.html_url} target="_blank">{repo.name}</a>
       <p> Language:
         {repo.language !== null ? <span className="greenText"> {repo.language}</span> : <span className="redText"> Unknown </span>}

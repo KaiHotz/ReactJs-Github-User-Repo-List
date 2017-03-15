@@ -6,6 +6,7 @@ const RepoList = (props) => {
   const repoItems = props.repos.map((repo, index)=>{
     return (
       <RepoListItem
+        onRepoSelect={props.onRepoSelect}
         key={index}
         repo={repo}
       />
@@ -15,7 +16,7 @@ const RepoList = (props) => {
   return (
     <div className="repo-list">
       <h4>List of available repositories:</h4>
-      <p>(click on the repo name to visit on GitHub)</p>
+      <p>(click on any repo to visit on GitHub)</p>
       <ul>
         {repoItems}
       </ul>
