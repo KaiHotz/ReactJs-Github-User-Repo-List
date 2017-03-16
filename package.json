@@ -4,8 +4,11 @@
   "name": "react-github-user-repo-list",
   "version": "1.0.0",
   "description": "Github User Repo List",
-  "main": "index.js",
-  "repository": "git@github.com:SpecialKcl/ReactJs-Github-User-Repo-List.git",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SpecialKcl/ReactJs-Github-User-Repo-List-browsersynch"
+  },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "jest",
@@ -20,6 +23,7 @@
     ]
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "babel-core": "^6.2.1",
     "babel-jest": "^17.0.2",
     "babel-loader": "^6.2.0",
