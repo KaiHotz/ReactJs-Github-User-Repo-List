@@ -36,6 +36,8 @@
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.27.3",
     "enzyme": "^2.7.1",
+    "eslint": "^3.18.0",
+    "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "jest-cli": "^17.0.3",
     "jquery": "^3.1.1",
