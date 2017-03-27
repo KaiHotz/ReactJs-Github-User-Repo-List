@@ -25,7 +25,7 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "babel-core": "^6.2.1",
-    "babel-jest": "^17.0.2",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-polyfill": "^6.20.0",
@@ -38,15 +38,15 @@
     "enzyme": "^2.7.1",
     "eslint": "^3.18.0",
     "eslint-plugin-react": "^6.10.3",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "jest-cli": "^17.0.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jest-cli": "^19.0.2",
     "jquery": "^3.1.1",
     "jsdom": "^9.12.0",
     "mocha": "^3.2.0",
     "sass-loader": "^6.0.3",
-    "style-loader": "^0.13.2",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "style-loader": "^0.16.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
@@ -59,6 +59,6 @@
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
     "simple-fetch": "^1.4.2",
-    "sinon": "^1.17.7"
+    "sinon": "^2.1.0"
   }
 }
