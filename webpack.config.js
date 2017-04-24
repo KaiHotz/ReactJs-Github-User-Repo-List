@@ -11,16 +11,11 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    },
-    {
-      test: /\.json?$/,
-      loader: 'json'
     },
     {
       test: /\.scss$/,

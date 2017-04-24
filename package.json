@@ -11,19 +11,11 @@
   },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "jest",
-    "tdd": "jest --watch --notify"
-  },
-  "jest": {
-    "automock": false,
-    "unmockedModulePathPatterns": [
-      "/node_modules/react",
-      "/node_modules/react-dom",
-      "/node_modules/react-addons-test-utils"
-    ]
+    "watch": "npm run start -- --watch",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
     "babel-core": "^6.2.1",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.2.0",
@@ -35,11 +27,9 @@
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.27.3",
-    "enzyme": "^2.7.1",
     "eslint": "^3.18.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
-    "jest-cli": "^19.0.2",
     "jquery": "^3.1.1",
     "jsdom": "^9.12.0",
     "mocha": "^3.2.0",
@@ -53,7 +43,6 @@
     "lodash": "^4.17.4",
     "node-sass": "^4.5.0",
     "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
     "react-addons-update": "^15.4.1",
     "react-dom": "^15.4.2",
     "react-tools": "^0.13.3",
