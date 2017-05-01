@@ -23,18 +23,19 @@ export default class Main extends React.Component{
 
   renderList() {
     return _.map(this.state.repos, repo => {
+      const { language, description } = repo;
       return (
           <li
-            key={repo.id}
+            key={ repo.id }
             className="list-group-item"
             onClick={() => window.open(repo.html_url, "_blank")}
           >
-            <h3 className="blueText">{repo.name}</h3>
+            <h3 className="blueText">{ repo.name }</h3>
             <p> Language:
-              {repo.language !== null ? <span className="greenText"> {repo.language}</span> : <span className="redText"> Unknown </span>}
+              {language !== null ? <span className="greenText"> { language }</span> : <span className="redText"> Unknown </span>}
             </p>
             <p>Description:</p>
-            {repo.description !== null ? <span className="greenText"> {repo.description}</span> : <span className="redText"> None </span>}
+            {description !== null ? <span className="greenText"> { description }</span> : <span className="redText"> None </span>}
           </li>
       );
     });
@@ -56,26 +57,27 @@ export default class Main extends React.Component{
   }
 
   render() {
+    const { userInfo: { avatar_url, login, html_url }, userName } = this.state;
     return (
       <div>
         <div className="search-bar">
           <input
             placeholder="Enter a Github User's name"
-            value={this.state.userName}
+            value={ userName }
             onChange={ event =>  this.gitSearch(event.target.value)}
             type="text"
           />
         </div>
         <div className="user-info">
-          <img className="img-responsive center-block" src={this.state.userInfo.avatar_url} />
-          <h3>{this.state.userInfo.login}</h3>
-          <h4><a href={this.state.userInfo.html_url} target="_blank">{this.state.userInfo.html_url}</a></h4>
+          <img className="img-responsive center-block" src={ avatar_url } />
+          <h3>{ login }</h3>
+          <h4><a href={html_url} target="_blank">{ html_url }</a></h4>
         </div>
         <div className="repo-list">
           <h4>List of available repositories:</h4>
           <p>(click on any repo to visit on GitHub)</p>
           <ul>
-            {this.renderList()}
+            { this.renderList() }
           </ul>
         </div>
       </div>
