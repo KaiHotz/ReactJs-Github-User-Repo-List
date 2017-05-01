@@ -1,53 +1,36 @@
 {
-  "author": "Kai Hotz",
-  "license": "Technical Assessment for GoEuro Travel GmbH.",
-  "name": "react-github-user-repo-list",
+  "name": "ReactJs-GitHub-User-Search",
   "version": "1.0.0",
-  "description": "Github User Repo List",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/SpecialKcl/ReactJs-Github-User-Repo-List-browsersynch"
-  },
+  "description": "Simple Github Repo Search by Username",
+  "main": "index.js",
+  "repository": "",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "watch": "npm run start -- --watch",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
+  "author": "",
+  "license": "",
   "devDependencies": {
     "babel-core": "^6.2.1",
-    "babel-jest": "^19.0.0",
     "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.20.2",
-    "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "babelify": "^7.3.0",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
-    "css-loader": "^0.28.0",
-    "eslint": "^3.18.0",
-    "eslint-plugin-react": "^6.10.3",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "jquery": "^3.1.1",
+    "jquery": "^3.2.1",
     "jsdom": "^9.12.0",
     "mocha": "^3.2.0",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.0",
+    "react-addons-test-utils": "^15.4.2",
     "webpack": "^2.3.2",
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^4.17.4",
-    "node-sass": "^4.5.0",
     "react": "^15.4.2",
-    "react-addons-update": "^15.4.1",
-    "react-dom": "^15.4.2",
-    "react-tools": "^0.13.3",
-    "reactify": "^1.1.1",
-    "simple-fetch": "^1.4.2",
-    "sinon": "^2.1.0"
+    "react-dom": "^15.4.2"
   }
 }

@@ -1,11 +1,11 @@
 import { renderComponent , expect } from '../test_helper';
-import App from '../../src/components/main';
+import GitSearch from '../../src/components/git_search';
 
-describe('Main' , () => {
+describe('GitSearch' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = renderComponent(GitSearch);
   });
 
   it('renders something', () => {
