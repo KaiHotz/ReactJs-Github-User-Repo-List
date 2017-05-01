@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import axios from 'axios';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 const API_URL = 'https://api.github.com/users';
 
-export default class Main extends React.Component{
+export default class Main extends Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -23,14 +23,14 @@ export default class Main extends React.Component{
 
   renderList() {
     return _.map(this.state.repos, repo => {
-      const { language, description } = repo;
+      const { language, description, name, html_url } = repo;
       return (
           <li
             key={ repo.id }
             className="list-group-item"
-            onClick={() => window.open(repo.html_url, "_blank")}
+            onClick={() => window.open(html_url, "_blank")}
           >
-            <h3 className="blueText">{ repo.name }</h3>
+            <h3 className="blueText">{ name }</h3>
             <p> Language:
               {language !== null ? <span className="greenText"> { language }</span> : <span className="redText"> Unknown </span>}
             </p>
