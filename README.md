@@ -1,10 +1,9 @@
 
-###Getting Started###
+### Getting Started
 
 There are two methods for getting started with this repo.
 
-####Familiar with Git?#####
-
+#### Familiar with Git?
 ```
   > git clone git@github.com:SpecialKcl/ReactJs-Github-User-Repo-List-webpack.git
   > cd ReactJs-Github-User-Repo-List
@@ -13,7 +12,7 @@ There are two methods for getting started with this repo.
   > in your Browser open http://localhost:8080
 ```
 
-####Not Familiar with Git?#####
+#### Not Familiar with Git?
 Click [here](https://github.com/SpecialKcl/ReactJs-Github-User-Repo-List-webpack.git) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
@@ -22,7 +21,7 @@ Click [here](https://github.com/SpecialKcl/ReactJs-Github-User-Repo-List-webpack
   > in your Browser open http://localhost:8080
 ```
 
-####To run Integration Test#####
+#### To run Integration Test
 ```
   > npm test
 ```
