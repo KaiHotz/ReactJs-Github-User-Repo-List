@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import axios from 'axios'
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 const API_URL = 'https://api.github.com/users'
 
@@ -47,10 +46,18 @@ class Main extends Component {
     (username !== '')
         ? axios.get(`${API_URL}/${username}/repos`)
             .then(
-              result => this.setState({ repos: result.data, userFound: true, userInfo: result.data[0].owner})
+              result => this.setState({
+                repos: result.data,
+                userFound: true,
+                userInfo: result.data[0].owner
+              })
               )
             .catch(err => {
-              this.setState({ repos: [], userFound: false, apiMsg: err.message })
+              this.setState({
+                repos: [],
+                userFound: false,
+                apiMsg: err.message
+              })
             })
         : this.setState({ repos: [] })
   }
