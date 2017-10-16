@@ -5,15 +5,12 @@ import RepoListElement from './RepoListElement'
 const API_URL = 'https://api.github.com/users'
 
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      inputValue: '',
-      userFound: false,
-      apiMsg: '',
-      repos: [],
-      userInfo: {}
-    }
+  state = {
+    inputValue: '',
+    userFound: false,
+    apiMsg: '',
+    repos: [],
+    userInfo: {}
   }
 
   gitSearch = (username) => {
