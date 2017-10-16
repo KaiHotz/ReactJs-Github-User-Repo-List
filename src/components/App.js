@@ -1,10 +1,10 @@
-import _ from 'lodash'
 import axios from 'axios'
 import React, { Component } from 'react'
+import RepoListElement from './RepoListElement'
 
 const API_URL = 'https://api.github.com/users'
 
-class Main extends Component {
+class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,30 +14,6 @@ class Main extends Component {
       repos: [],
       userInfo: {}
     }
-  }
-
-  onInputChange (userName) {
-    this.setState({userName})
-  }
-
-  renderList () {
-    return _.map(this.state.repos, repo => {
-      const { language, description, name, html_url } = repo
-      return (
-        <li
-          key={repo.id}
-          className='list-group-item'
-          onClick={() => window.open(html_url, '_blank')}
-          >
-          <h3 className='blueText'>{ name }</h3>
-          <p> Language:
-              {language !== null ? <span className='greenText'> { language }</span> : <span className='redText'> Unknown </span>}
-          </p>
-          <p>Description:</p>
-          {description !== null ? <span className='greenText'> { description }</span> : <span className='redText'> None </span>}
-        </li>
-      )
-    })
   }
 
   gitSearch = (username) => {
@@ -63,7 +39,7 @@ class Main extends Component {
   }
 
   render () {
-    const { userInfo: { avatar_url, login, html_url }, userName } = this.state
+    const { userInfo: { avatar_url, login, html_url }, userName, repos } = this.state
     return (
       <div>
         <div className='search-bar'>
@@ -83,7 +59,7 @@ class Main extends Component {
           <h4>List of available repositories:</h4>
           <p>(click on any repo to visit on GitHub)</p>
           <ul>
-            { this.renderList() }
+            <RepoListElement repos={repos} />
           </ul>
         </div>
       </div>
@@ -91,4 +67,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+export default App
