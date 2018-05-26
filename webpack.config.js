@@ -15,7 +15,7 @@ module.exports = {
     vendor: VENDOR_LIBS
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'build'),
     filename: '[name].[hash].js'
   },
   devtool: 'inline-source-map',
@@ -49,9 +49,6 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
-    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
