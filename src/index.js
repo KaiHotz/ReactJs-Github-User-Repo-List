@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from '@/src/components/App'
-import '@/styles/styles.scss'
+import App from './App'
 
 const render = Component => {
   ReactDOM.render(
@@ -13,8 +12,8 @@ const render = Component => {
 render(App)
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    const App = require('./components/App').default
+  module.hot.accept('./App', () => {
+    const App = require('./App').default
     render(App)
   })
 }

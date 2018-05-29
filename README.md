@@ -13,7 +13,7 @@ There are two methods for getting started with this repo.
 ```
 
 #### Not Familiar with Git?
-Click [here](https://github.com/KaiHotz/ReactJs-Github-User-Repo-List.git) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click [here](https://github.com/KaiHotz/ReactJs-Github-User-Repo-List/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
   > npm install
@@ -21,7 +21,7 @@ Click [here](https://github.com/KaiHotz/ReactJs-Github-User-Repo-List.git) then 
   > in your Browser open http://localhost:3000
 ```
 
-#### To run Integration Test
+#### To run Test
 ```
   > npm test
 ```

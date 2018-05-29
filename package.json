@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Simple Github Repo Search by Username",
   "main": "index.js",
-  "repository": "https://github.com/KaiHotz/React-Redux-Trip-Sorter",
-  "author": "",
-  "license": "ISC",
+  "repository": "https://github.com/KaiHotz/ReactJs-Github-User-Repo-List",
+  "homepage": "https://KaiHotz.github.io/ReactJs-Github-User-Repo-List",
+  "author": "Kai Hotz",
+  "license": "MIT",
   "standard": {
     "parser": "babel-eslint",
     "env": [
@@ -28,6 +29,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.0.0",
     "node-sass": "^4.9.0",
@@ -53,6 +55,8 @@
     "lint": "standard",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build": "webpack --config ./webpack.config.js --mode production"
+    "build": "npm run clean && webpack --config ./webpack.config.js --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
