@@ -8,13 +8,12 @@ const API_URL = 'https://api.github.com/users'
 class GithubSearch extends Component {
   state = {
     username: '',
-    userFound: false,
     apiMsg: '',
     repos: [],
     userInfo: {}
   }
 
-  handleInput = event => {
+  handleChange = event => {
     this.setState({ username: event.target.value });
     setTimeout(this.handleSearch, 1000)
   }
@@ -24,14 +23,12 @@ class GithubSearch extends Component {
       .then(
         result => this.setState({
           repos: result.data,
-          userFound: true,
           userInfo: result.data[0].owner
         })
       )
       .catch(err => {
         this.setState({
           repos: [],
-          userFound: false,
           apiMsg: err.message
         })
       })
@@ -41,6 +38,7 @@ class GithubSearch extends Component {
     const {
       username,
       repos,
+      apiMsg,
       userInfo: {
         avatar_url,
         login,
@@ -53,24 +51,27 @@ class GithubSearch extends Component {
           <input
             placeholder="Enter a Github User's name"
             value={username}
-            onChange={this.handleInput}
+            onChange={this.handleChange}
             type='text'
           />
-        </div>
-        <div className='user-info'>
-          <img className='img-responsive center-block' src={avatar_url} />
-          <h3>{ login }</h3>
-          <h4><a href={html_url} target='_blank'>{ html_url }</a></h4>
+          <p className='redText'>{ apiMsg }</p>
         </div>
         {
           repos.length > 0 &&
-            <div className='repo-list'>
-              <h4>List of available repositories:</h4>
-              <p>(click on any repo to visit on GitHub)</p>
-              <ul>
-                {_.map(repos, repo => <RepoListElement key={repo.id} {...repo} />)}
-              </ul>
-            </div>
+            <Fragment>
+              <div className='user-info'>
+                <img className='img-responsive center-block' src={avatar_url} />
+                <h3>{ login }</h3>
+                <h4><a href={html_url} target='_blank'>{ html_url }</a></h4>
+              </div>
+              <div className='repo-list'>
+                <h4>List of available repositories:</h4>
+                <p>(click on any repo to visit on GitHub)</p>
+                <ul>
+                  {_.map(repos, repo => <RepoListElement key={repo.id} {...repo} />)}
+                </ul>
+              </div>
+            </Fragment>
         }
       </Fragment>
     )
